@@ -1,13 +1,4 @@
  
- /*------------------------------*/
-/*	Page loader
-/*------------------------------*/
-
-
- $(window).load(function() {
-	$(".loader-item").delay(500).fadeOut();
-	$("#pageloader").delay(1000).fadeOut("slow");
-	});
 
 
  /*------------------------------*/
@@ -322,30 +313,6 @@ $('.popup-image').magnificPopup({
 
 
 
-/*------------------------------*/
-/* Pie Chart
-/*------------------------------*/
-
-$('.pie-chart').appear();
-jQuery(document).on('appear', '.pie-chart',  function()  {
-    $('.pie-chart').easyPieChart({
-        easing: 'easeOutBounce',
-        onStep: function(from, to, percent) {
-            $(this.el).find('.percent').text(Math.round(percent));
-        },
-
-        trackColor: '#FFF',
-        barColor: '#25d6eb',
-        scaleColor: '',
-        lineWidth:10,
-        lineCap:'circle',
-        animate: 2000
-    });
-    var chart = window.chart = $('.chart').data('easyPieChart');
-    $('.js_update').on('click', function() {
-        chart.update(Math.random()*200-100);
-    });
-});
 
 
 /*------------------------------*/
